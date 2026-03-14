@@ -55,11 +55,25 @@ namespace CapaPrensentacion
             {
                 // 3. Todas las reservas con estado de pago
                 dgvReportes.DataSource = objCN_Reportes.VerTodasLasReservas();
+
+                Reserva reserva = new Reserva();
+                MessageBox.Show("Reporte cargado. " + reserva.ObtenerDescripcion(),"Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void dgvReportes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FrmReportes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

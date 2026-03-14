@@ -87,7 +87,7 @@
             // 
             btnPagar.BackColor = Color.LawnGreen;
             btnPagar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPagar.Location = new Point(225, 650);
+            btnPagar.Location = new Point(383, 650);
             btnPagar.Name = "btnPagar";
             btnPagar.Size = new Size(193, 50);
             btnPagar.TabIndex = 3;
@@ -97,6 +97,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.DarkGray;
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -104,7 +105,7 @@
             panel1.Controls.Add(cmbMetodoPago);
             panel1.Controls.Add(cmbReserva);
             panel1.Controls.Add(txtMonto);
-            panel1.Location = new Point(12, 304);
+            panel1.Location = new Point(170, 304);
             panel1.Name = "panel1";
             panel1.Size = new Size(629, 313);
             panel1.TabIndex = 4;
@@ -122,6 +123,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(334, 259);
             panel2.TabIndex = 6;
+            panel2.Paint += panel2_Paint;
             // 
             // label5
             // 
@@ -215,8 +217,9 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(225, 12);
+            pictureBox1.Location = new Point(386, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(190, 169);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -226,11 +229,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.BackColor = Color.LightGray;
+            label6.BackColor = Color.Transparent;
             label6.BorderStyle = BorderStyle.FixedSingle;
             label6.Font = new Font("Perpetua Titling MT", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.DarkGoldenrod;
-            label6.Location = new Point(88, 184);
+            label6.Location = new Point(246, 189);
             label6.Name = "label6";
             label6.Size = new Size(475, 50);
             label6.TabIndex = 13;
@@ -239,11 +242,11 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = Color.LightGray;
+            label7.BackColor = Color.Gainsboro;
             label7.BorderStyle = BorderStyle.FixedSingle;
             label7.Font = new Font("Perpetua Titling MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.DarkCyan;
-            label7.Location = new Point(164, 259);
+            label7.Location = new Point(341, 261);
             label7.Name = "label7";
             label7.Size = new Size(301, 30);
             label7.TabIndex = 14;
@@ -253,7 +256,7 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(591, 12);
+            pictureBox3.Location = new Point(908, 12);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(50, 49);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -265,7 +268,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(653, 746);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(970, 750);
             Controls.Add(pictureBox3);
             Controls.Add(label7);
             Controls.Add(label6);

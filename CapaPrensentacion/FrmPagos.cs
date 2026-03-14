@@ -32,6 +32,8 @@ namespace CapaPrensentacion
                         lblClienteInfo.Text = "Cliente: " + dtInfo.Rows[0]["Cliente"].ToString();
                         lblNochesInfo.Text = "Noches: " + dtInfo.Rows[0]["Noches"].ToString();
 
+                        Pago pago = new Pago(0, (int)cmbReserva.SelectedValue,DateTime.Today, totalPagar, "");
+
                         // Formateamos también el precio por noche para que combine
                         decimal precioNoche = Convert.ToDecimal(dtInfo.Rows[0]["Precio"]);
                         lblPrecioInfo.Text = "Precio p/n: RD $ " + precioNoche.ToString("N2");
@@ -112,6 +114,11 @@ namespace CapaPrensentacion
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -7,46 +7,57 @@
             InitializeComponent();
         }
 
+        private void CargarFormulario(Form formulario)
+        {
+            panel1.Controls.Clear();
+
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+
+            panel1.Controls.Add(formulario);
+            panel1.Tag = formulario;
+            formulario.Show();
+        }
+
         private void btnIrReservas_Click(object sender, EventArgs e)
         {
-            FrmReservas formReservas = new FrmReservas();
-            formReservas.ShowDialog();
+            CargarFormulario(new FrmReservas());
         }
 
         private void btnIrReportes_Click(object sender, EventArgs e)
         {
-            FrmReportes formReportes = new FrmReportes();
-            formReportes.ShowDialog();
+            CargarFormulario(new FrmReportes());
         }
 
-        //Boton para salir o cerrar la aplicación
+        private void btnIrPagos_Click(object sender, EventArgs e)
+        {
+            CargarFormulario(new FrmPagos());
+        }
+
+        // Botón cerrar
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        //Boton para volver al estado original y maximizar la aplicación
+        // Botón maximizar/restaurar
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Maximized)
-            {
                 WindowState = FormWindowState.Normal;
-            }
             else
-            {
                 WindowState = FormWindowState.Maximized;
-            }
         }
-        //Boton para minimizar la aplicación
+
+        // Botón minimizar
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-        //llama al formulario de pagos
-        private void btnIrPagos_Click(object sender, EventArgs e)
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            FrmPagos formPagos = new FrmPagos();
-            formPagos.ShowDialog();
         }
     }
 }

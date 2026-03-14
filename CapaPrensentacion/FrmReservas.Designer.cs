@@ -163,9 +163,9 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 21);
+            pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(149, 129);
+            pictureBox1.Size = new Size(172, 161);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
@@ -177,7 +177,7 @@
             label6.BorderStyle = BorderStyle.FixedSingle;
             label6.Font = new Font("Perpetua Titling MT", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.DarkGoldenrod;
-            label6.Location = new Point(243, 58);
+            label6.Location = new Point(255, 77);
             label6.Name = "label6";
             label6.Size = new Size(475, 50);
             label6.TabIndex = 12;
@@ -190,7 +190,7 @@
             label7.BorderStyle = BorderStyle.FixedSingle;
             label7.Font = new Font("Perpetua Titling MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.DarkCyan;
-            label7.Location = new Point(319, 149);
+            label7.Location = new Point(396, 258);
             label7.Name = "label7";
             label7.Size = new Size(196, 30);
             label7.TabIndex = 13;
@@ -210,7 +210,7 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(52, 201);
+            panel1.Location = new Point(122, 326);
             panel1.Name = "panel1";
             panel1.Size = new Size(716, 288);
             panel1.TabIndex = 14;
@@ -219,7 +219,7 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(755, 12);
+            pictureBox3.Location = new Point(898, 12);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(50, 49);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -232,7 +232,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(826, 491);
+            ClientSize = new Size(970, 750);
             Controls.Add(pictureBox3);
             Controls.Add(panel1);
             Controls.Add(label7);
